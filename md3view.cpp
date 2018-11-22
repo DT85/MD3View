@@ -57,6 +57,7 @@ void init_mdview(const char* lpcommandline)
 	mdview.iLODLevel = 0;
 	mdview.iSkinNumber = 0;
 	mdview.bAxisView = false;
+	mdview.bShowOriginsAsRGB = true;
 	reset_viewpos();
 	mdview.animSpeed = 0.05;	// so 1/this = 10 = 10FPS
 	mdview.timeStamp1 = getDoubleTime();

@@ -42,22 +42,23 @@ BEGIN
     END
     POPUP "View"
     BEGIN
-        MENUITEM "&Wire Frame\tW",              ID_VIEW_WIREFRAME
+        MENUITEM "&WireFrame\tW",				ID_VIEW_WIREFRAME
         MENUITEM "&Flat Shaded\tF",             ID_VIEW_FLATSHADED
         MENUITEM "&Textured\tT",                ID_VIEW_TEXTURED
-        MENUITEM "Textured &Shaded\tS",         ID_VIEW_TEXTUREDSHADED
+        MENUITEM "Textured && Shaded\tS",       ID_VIEW_TEXTUREDSHADED
         MENUITEM "Textured && WireFrame\tCTRL-W", ID_VIEW_TEXTUREDWIREFRAME
         MENUITEM SEPARATOR
-        MENUITEM "Reset &Viewpos\tSHIFT-V",     ID_VIEWPOS_RESET
+        MENUITEM "Reset &View\tSHIFT-V",		ID_VIEWPOS_RESET
         MENUITEM SEPARATOR
-        MENUITEM "Refresh Texture\tAlt-R",      ID_VIEW_REFRESHTEXTURE
+        MENUITEM "Refresh Texture(s)\tAlt-R",   ID_VIEW_REFRESHTEXTURE
         MENUITEM SEPARATOR
-        MENUITEM "F&ast Texture\tA",            ID_VIEW_NEAREST
-        MENUITEM "&Unfiltered Texture\tU",      ID_VIEW_UNFILTEREDTEXTURE
-        MENUITEM "F&iltered Texture\tI",        ID_VIEW_FILTEREDTEXTURE
+        MENUITEM "F&ast Texture(s)\tA",         ID_VIEW_NEAREST
+        MENUITEM "&Unfiltered Texture(s)\tU",   ID_VIEW_UNFILTEREDTEXTURE
+        MENUITEM "F&iltered Texture(s)\tI",     ID_VIEW_FILTEREDTEXTURE
         MENUITEM SEPARATOR
-        MENUITEM "View Loaded-Models info",     ID_VIEW_LOADEDSTUFF
+        MENUITEM "View Loaded Model info",		ID_VIEW_LOADEDSTUFF
         MENUITEM "View Origin ( model axis and tags )\tALT-O", ID_VIEWAXIS
+		MENUITEM "Toggle RGB Lines for tag origins instead of axis lines", ID_SHOWORIGINSRGB
         MENUITEM SEPARATOR
         MENUITEM "Toggle Alpha Blending\tSHIFT-A", ID_VIEWALPHA
         MENUITEM SEPARATOR
@@ -69,9 +70,9 @@ BEGIN
         MENUITEM "Toggle FOV 80/90/10\tCTRL-F", ID_VIEW_FOVTOGGLE
         MENUITEM "Toggle &Bounding-box\tCTRL-B", ID_VIEW_BOUNDSTOGGLE
         MENUITEM SEPARATOR
-        MENUITEM "LOD1\tF1",                    ID_LOD0
-        MENUITEM "LOD2\tF2",                    ID_LOD1
-        MENUITEM "LOD3\tF3",                    ID_LOD2
+        MENUITEM "LOD0\tF1",                    ID_LOD0
+        MENUITEM "LOD1\tF2",                    ID_LOD1
+        MENUITEM "LOD2\tF3",                    ID_LOD2
         MENUITEM SEPARATOR
         MENUITEM "Picmip 0\tCTRL-F1",           ID_PICMIP0
         MENUITEM "Picmip 1\tCTRL-F2",           ID_PICMIP1

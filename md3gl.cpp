@@ -1187,6 +1187,8 @@ void draw_skeleton( gl_model *model )
 		if (mdview.bAxisView)
 		{
 		#define TAG_LINE_LEN 10
+		#define TAG_TEXT_COLOUR 255,0,255
+
 			static Vec3 v3X		= { TAG_LINE_LEN,0,0};
 			static Vec3 v3XNeg	= {-TAG_LINE_LEN,0,0};
 
@@ -1198,46 +1200,85 @@ void draw_skeleton( gl_model *model )
 
 			glPushAttrib(GL_ENABLE_BIT | GL_CURRENT_BIT);
 			{
-				glColor3f(1,1,1);
 				glDisable(GL_TEXTURE_2D);
 				glDisable(GL_LIGHTING);
-				glBegin(GL_LINES);
+
+				if (mdview.bShowOriginsAsRGB)
 				{
-					glVertex3fv(v3X);
-					glVertex3fv(v3XNeg);
+					glLineWidth(4);
+					{
+						// X (red)...
+						//
+						glColor3f(1, 0, 0);
+						glBegin(GL_LINES);
+						{
+							glVertex3fv(v3X);
+							glVertex3f(0, 0, 0);
+						}
+						glEnd();
 
-					glVertex3fv(v3Y);
-					glVertex3fv(v3YNeg);
+						// Y (green)...
+						//
+						glColor3f(0, 1, 0);
+						glBegin(GL_LINES);
+						{
+							glVertex3fv(v3Y);
+							glVertex3f(0, 0, 0);
+						}
+						glEnd();
 
-					glVertex3fv(v3Z);
-					glVertex3fv(v3ZNeg);
+						// Z (blue)...
+						//
+						glColor3f(0, 0, 1);
+						glBegin(GL_LINES);
+						{
+							glVertex3fv(v3Z);
+							glVertex3f(0, 0, 0);
+						}
+						glEnd();
+					}
+					glLineWidth(1);
 				}
-				glEnd();
+				else
+				{
+					glColor3f(1, 1, 1);
+					glBegin(GL_LINES);
+					{
+						glVertex3fv(v3X);
+						glVertex3fv(v3XNeg);
 
-		#define TAG_TEXT_COLOUR 255,0,255
-				Text_Display( "X",	v3X,	TAG_TEXT_COLOUR);
-				Text_Display("-X",	v3XNeg,	TAG_TEXT_COLOUR);
-				Text_Display( "Y",	v3Y,	TAG_TEXT_COLOUR);
-				Text_Display("-Y",	v3YNeg,	TAG_TEXT_COLOUR);
-				Text_Display( "Z",	v3Z,	TAG_TEXT_COLOUR);
-				Text_Display("-Z",	v3ZNeg,	TAG_TEXT_COLOUR);
+						glVertex3fv(v3Y);
+						glVertex3fv(v3YNeg);
+
+						glVertex3fv(v3Z);
+						glVertex3fv(v3ZNeg);
+					}
+					glEnd();
+
+					Text_Display("X", v3X, TAG_TEXT_COLOUR);
+					Text_Display("-X", v3XNeg, TAG_TEXT_COLOUR);
+					Text_Display("Y", v3Y, TAG_TEXT_COLOUR);
+					Text_Display("-Y", v3YNeg, TAG_TEXT_COLOUR);
+					Text_Display("Z", v3Z, TAG_TEXT_COLOUR);
+					Text_Display("-Z", v3ZNeg, TAG_TEXT_COLOUR);
+				}
 
 				// now draw tag name (neat, eh?)
 				//
-				glColor3f(0.5,0.5,0.5);
-				static Vec3 v3NamePos = {TAG_LINE_LEN,TAG_LINE_LEN,TAG_LINE_LEN};
+				glColor3f(0.5, 0.5, 0.5);
+				static Vec3 v3NamePos = { TAG_LINE_LEN,TAG_LINE_LEN,TAG_LINE_LEN };
 
-				glLineStipple( 8, 0xAAAA);
+				glLineStipple(8, 0xAAAA);
 				glEnable(GL_LINE_STIPPLE);
 
 				glBegin(GL_LINES);
 				{
-					glVertex3f(0,0,0);
+					glVertex3f(0, 0, 0);
 					glVertex3fv(v3NamePos);
 				}
 				glEnd();
 
-				Text_Display( tag->name, v3NamePos, TAG_TEXT_COLOUR);
+				Text_Display(tag->name, v3NamePos, TAG_TEXT_COLOUR);
 			}
 			glPopAttrib();
 		}

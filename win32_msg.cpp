@@ -1395,6 +1395,11 @@ void SysOnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 			InvalidateRect( hwnd, NULL, FALSE );
 			break;
 
+		case ID_SHOWORIGINSRGB:
+			mdview.bShowOriginsAsRGB = !mdview.bShowOriginsAsRGB;
+			InvalidateRect(hwnd, NULL, FALSE);
+			break;
+
 		case ID_VIEWALPHA:
 			mdview.bUseAlpha = !mdview.bUseAlpha;
 			InvalidateRect( hwnd, NULL, FALSE );
