@@ -556,8 +556,8 @@ void ClearAnimationCFG()
 	mdview.xPos = 0.0f;
 	mdview.yPos = 0.0f;
 
-	mdview.rotAngleX = 
-	mdview.rotAngleY =   0.0f;
+	mdview.rotAngleX = 20.0f;
+	mdview.rotAngleY = 45.0f;
 	mdview.rotAngleZ = -90.0f;
 
 	mdview.bAnimCFGLoaded = false;

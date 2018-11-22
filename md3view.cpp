@@ -40,9 +40,11 @@ void render_mdview()
 
 void reset_viewpos(void)
 {
-	mdview.xPos = mdview.yPos = 0.0f;
-	mdview.zPos = -2.f;
-    mdview.rotAngleX = mdview.rotAngleY = 0;
+	mdview.xPos = 0.0f;
+	mdview.yPos = 0.0f;
+	mdview.zPos = -10.0f;
+	mdview.rotAngleX = 20.0f;
+	mdview.rotAngleY = 45.0f;
 	mdview.rotAngleZ = -90.0f;
 }
 
@@ -51,12 +53,12 @@ initializes the viewer global state data
 */
 void init_mdview(const char* lpcommandline)
 {
-	mdview.dFOV = 90.0f;
+	mdview.dFOV = 10.0f;
 	mdview.iLODLevel = 0;
 	mdview.iSkinNumber = 0;
 	mdview.bAxisView = false;
 	reset_viewpos();
-	mdview.animSpeed = 0.1;	// so 1/this = 10 = 10FPS
+	mdview.animSpeed = 0.05;	// so 1/this = 10 = 10FPS
 	mdview.timeStamp1 = getDoubleTime();
 	mdview.texMode = TEX_FILTERED;
 	mdview.faceSide = GL_CCW;
