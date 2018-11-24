@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,42 +13,38 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
 //
 
-IDR_MENU1 MENU DISCARDABLE 
+IDR_MENU1 MENU
 BEGIN
     POPUP "File"
     BEGIN
         MENUITEM "Open..\tCtrl-O",              ID_FILE_OPEN
         MENUITEM "Export as MD3",               ID_FILE_SAVE_MD3
         MENUITEM "Export as GLM (Ghoul 2)",     ID_FILE_SAVE_G2
-        MENUITEM "Export as GLM (Ghoul 2) *without* 90-degree skewing ( added for JKA )", 
-                                                ID_FILE_SAVE_G2_PERFECT
-        MENUITEM "Export to Raw...",            ID_FILE_EXPORTTORAW, GRAYED
+        MENUITEM "Export as GLM (Ghoul 2) without 90-degree skewing", ID_FILE_SAVE_G2_PERFECT
         MENUITEM "Import skin..",               ID_FILE_IMPORTSKIN
         MENUITEM "Import Sequence file",        ID_FILE_IMPORTMULTISEQ
         MENUITEM "E&xit\tCtrl-X",               ID_FILE_EXIT
     END
     POPUP "View"
     BEGIN
-        MENUITEM "&WireFrame\tW",				ID_VIEW_WIREFRAME
+        MENUITEM "&WireFrame\tW",               ID_VIEW_WIREFRAME
         MENUITEM "&Flat Shaded\tF",             ID_VIEW_FLATSHADED
         MENUITEM "&Textured\tT",                ID_VIEW_TEXTURED
         MENUITEM "Textured && Shaded\tS",       ID_VIEW_TEXTUREDSHADED
         MENUITEM "Textured && WireFrame\tCTRL-W", ID_VIEW_TEXTUREDWIREFRAME
         MENUITEM SEPARATOR
-        MENUITEM "Reset &View\tSHIFT-V",		ID_VIEWPOS_RESET
+        MENUITEM "Reset &View\tSHIFT-V",        ID_VIEWPOS_RESET
         MENUITEM SEPARATOR
         MENUITEM "Refresh Texture(s)\tAlt-R",   ID_VIEW_REFRESHTEXTURE
         MENUITEM SEPARATOR
@@ -56,9 +52,9 @@ BEGIN
         MENUITEM "&Unfiltered Texture(s)\tU",   ID_VIEW_UNFILTEREDTEXTURE
         MENUITEM "F&iltered Texture(s)\tI",     ID_VIEW_FILTEREDTEXTURE
         MENUITEM SEPARATOR
-        MENUITEM "View Loaded Model info",		ID_VIEW_LOADEDSTUFF
+        MENUITEM "View Loaded Model info",      ID_VIEW_LOADEDSTUFF
         MENUITEM "View Origin ( model axis and tags )\tALT-O", ID_VIEWAXIS
-		MENUITEM "Toggle RGB Lines for tag origins instead of axis lines", ID_SHOWORIGINSRGB
+        MENUITEM "Toggle RGB Lines for tag origins instead of axis lines", ID_SHOWTAGSASRGB
         MENUITEM SEPARATOR
         MENUITEM "Toggle Alpha Blending\tSHIFT-A", ID_VIEWALPHA
         MENUITEM SEPARATOR
@@ -105,14 +101,15 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_APP                 ICON    DISCARDABLE     "ID_APP.ico"
+IDI_APP                 ICON                    "ID_APP.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_EXPORTTORAW     "This is pretty pointless really"
     ID_VIEW_LOADEDSTUFF     "Shows stuff like tags, TGA filenames etc..."
@@ -124,7 +121,7 @@ BEGIN
     ID_FACE_RESANIM         "(Only works if a head model is loaded)"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_FILE_SAVE_MD3        "(Export model as MD3 format)"
     ID_FILE_IMPORTMULTISEQ  "Used fr importing a multi-sequence lock file"
@@ -137,7 +134,7 @@ BEGIN
     ID_PICMIP0              "Change all textures to use picmip 0"
 END
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     ID_PICMIP1              "Re-upload all textures at picmip 1"
     ID_PICMIP2              "reload all textures to picmip 2"
@@ -148,7 +145,7 @@ BEGIN
     ID_FILE_SAVE_G2_PERFECT "(Export model as Ghoul2, but WITHOUT the 90-degree skewing)"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
@@ -156,10 +153,8 @@ END
 // Dutch (Netherlands) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
-#ifdef _WIN32
 LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -167,18 +162,18 @@ LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -192,7 +187,7 @@ END
 // Accelerator
 //
 
-IDR_ACCELERATOR1 ACCELERATORS DISCARDABLE 
+IDR_ACCELERATOR1 ACCELERATORS
 BEGIN
     ",",            ID_FRAME_DW,            ASCII,  NOINVERT
     ".",            ID_FRAME_UP,            ASCII,  NOINVERT
@@ -231,8 +226,7 @@ BEGIN
     VK_F4,          ID_FACE_INCANIM,        VIRTKEY, NOINVERT
     VK_F4,          ID_PICMIP3,             VIRTKEY, CONTROL, NOINVERT
     VK_F4,          ID_FACE_RESANIM,        VIRTKEY, SHIFT, NOINVERT
-    VK_F4,          ID_FACE_DECANIM,        VIRTKEY, SHIFT, CONTROL, 
-                                                    NOINVERT
+    VK_F4,          ID_FACE_DECANIM,        VIRTKEY, SHIFT, CONTROL, NOINVERT
     VK_F5,          ID_PICMIP4,             VIRTKEY, CONTROL, NOINVERT
     VK_F6,          ID_PICMIP5,             VIRTKEY, CONTROL, NOINVERT
     VK_F7,          ID_PICMIP6,             VIRTKEY, CONTROL, NOINVERT
@@ -252,7 +246,7 @@ END
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDS_FILESTRING          "Model files (*.MDR)(*.MD3)|*.md?|"
     IDS_RAWFILEFILTER       ".raw files (*.raw)|*.raw|"

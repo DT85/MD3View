@@ -98,7 +98,7 @@ typedef struct
 	int				iLODLevel;
 	int				iSkinNumber;
 	bool			bAxisView;
-	bool			bShowOriginsAsRGB;
+	bool			bShowTagsAsRGB;
 
 	byte			_R,_G,_B;	// clear colours
 

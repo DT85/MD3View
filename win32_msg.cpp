@@ -1395,8 +1395,8 @@ void SysOnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 			InvalidateRect( hwnd, NULL, FALSE );
 			break;
 
-		case ID_SHOWORIGINSRGB:
-			mdview.bShowOriginsAsRGB = !mdview.bShowOriginsAsRGB;
+		case ID_SHOWTAGSASRGB:
+			mdview.bShowTagsAsRGB = !mdview.bShowTagsAsRGB;
 			InvalidateRect(hwnd, NULL, FALSE);
 			break;
 

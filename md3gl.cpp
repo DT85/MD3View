@@ -1203,7 +1203,7 @@ void draw_skeleton( gl_model *model )
 				glDisable(GL_TEXTURE_2D);
 				glDisable(GL_LIGHTING);
 
-				if (mdview.bShowOriginsAsRGB)
+				if (mdview.bShowTagsAsRGB)
 				{
 					glLineWidth(4);
 					{
