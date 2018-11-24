@@ -681,7 +681,7 @@ void stat_gl_model( gl_model *__model, char *psAttachedVia )
 		//
 		iNextX =
 		Text_DisplayFlat(	String_EnsureMinLength(
-													va("%s", psAttachedVia?va("(attached: \"%s\")",psAttachedVia):""),
+													va("%s", psAttachedVia?va("(attached to: \"%s\")",psAttachedVia):""),
 													ARB_ATTACHNAME_PADDING
 													),	
 							iNextX+(2*TEXT_WIDTH), iTextY, 
