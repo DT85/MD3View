@@ -348,7 +348,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="ID_APP.ico">
+    <Image Include="res\md3view.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -101,7 +101,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_APP                 ICON                    "ID_APP.ico"
+IDI_APP                 ICON                    "res\\md3view.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -256,6 +256,17 @@ BEGIN
 END
 
 #endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+
+#endif    // English (Australia) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Developer Studio generated include file.
-// Used by MD3View.rc
+// Microsoft Visual C++ generated include file.
+// Used by md3view.rc
 //
 #define IDS_FILESTRING                  1
 #define IDS_RAWFILEFILTER               2
@@ -13,6 +13,8 @@
 #define IDR_MENU1                       101
 #define IDI_APP                         102
 #define IDR_ACCELERATOR1                105
+#define IDR_TOOLBAR1                    106
+#define IDB_BITMAP1                     107
 #define ID_FILE_EXIT                    40002
 #define ID_ABOUT                        40003
 #define ID_VIEW_WIREFRAME               40004
@@ -68,7 +70,7 @@
 #define ID_VIEW_TEXTUREDWIREFRAME       40056
 #define ID_VIEW_BOUNDSTOGGLE            40057
 #define ID_FILE_SAVE_G2_PERFECT         40058
-#define ID_SHOWTAGSASRGB				40059
+#define ID_SHOWTAGSASRGB                40059
 #define ID_TAG_START                    50000
 #define ID_MENUITEMS_UPPERANIMS         60000
 #define ID_MENUITEMS_LOWERANIMS         61000
@@ -78,7 +80,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        106
+#define _APS_NEXT_RESOURCE_VALUE        108
 #define _APS_NEXT_COMMAND_VALUE         40059
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           101
