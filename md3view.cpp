@@ -580,10 +580,17 @@ void stat_gl_model( gl_model *__model, char *psAttachedVia )
 	int iNextX = 0;
 	if (model)
 	{
+		iNextX =
+		Text_DisplayFlat(va("%s",
+							String_EnsureMinLength(va("%s", model->sMD3BaseName), ARB_NAME_PADDING)),
+							iTextX, iTextY,
+							255, 255, 0,		// RGB
+							false
+						);
+
 		iNextX = 
-		Text_DisplayFlat(	va("%s Frame %4d/%4d", 
-								String_EnsureMinLength(va("\"%s\"",model->sMD3BaseName),ARB_NAME_PADDING), 							
-								model->currentFrame, model->iNumFrames),	
+		Text_DisplayFlat(	va("                           Frame: %4d/%4d",							
+							model->currentFrame, model->iNumFrames),	
 							iTextX, iTextY, 
 							0, 255,0,		// RGB
 							false
@@ -595,9 +602,9 @@ void stat_gl_model( gl_model *__model, char *psAttachedVia )
 
 		iNextX = 
 						//  va("%s Frame 1234/1234"
-		Text_DisplayFlat(	va("%s                ", String_EnsureMinLength("( totals )",ARB_NAME_PADDING)),
+		Text_DisplayFlat(	va("%s                 ", String_EnsureMinLength("( totals )",ARB_NAME_PADDING)),
 							iTextX, iTextY, 
-							0, 255,0,		// RGB
+							255, 255, 255,		// RGB
 							false
 						);
 	}
@@ -645,7 +652,7 @@ void stat_gl_model( gl_model *__model, char *psAttachedVia )
 		//
 		iNextX =
 		Text_DisplayFlat(	String_EnsureMinLength(
-													va("(V:%4d T:%4d)",model->iRenderedVerts,model->iRenderedTris),
+													va("(Verts: %4d Tris: %4d)",model->iRenderedVerts,model->iRenderedTris),
 													ARB_VERTINFO_PADDING
 													),
 							iNextX+(2*TEXT_WIDTH), iTextY, 
@@ -660,10 +667,7 @@ void stat_gl_model( gl_model *__model, char *psAttachedVia )
 		// Verts/tris info...
 		//
 		iNextX =
-		Text_DisplayFlat(	String_EnsureMinLength(
-													va("(V:%4d T:%4d)",giTotVerts,giTotTris),
-													ARB_VERTINFO_PADDING
-													),
+		Text_DisplayFlat(	String_EnsureMinLength(va("(Total Verts: %4d Total Tris: %4d)",giTotVerts,giTotTris),ARB_VERTINFO_PADDING),
 							iNextX+(2*TEXT_WIDTH), iTextY, 
 							255, 255/2, 255/2,		// RGB (pink)
 							false
