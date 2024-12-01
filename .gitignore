@@ -3,3 +3,7 @@ Release/MD3View_GL_report.txt
 *.bsc
 *.map
 *.idb
+/.vs
+/Release
+MD3View.vcxproj.user
+/Debug
